@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Affiliate-BE-Test-Suite">
+    <listeners>
+        <listener class-name="custom.testng.TaggingTransformer"/>
+    </listeners>
+
+
+    <test verbose="2" parallel="classes" preserve-order="true" name="Affiliate-BE-Report">
+
+        <classes>
+            <class name="affiliate.core.P0_CreateAffiliateCookie">
+                <methods>
+                    <include name="testCreateAffiliateCookiePostiveTC"/>
+                    <include name="testCreateAffiliateCookiePostiveTCWithExceptions"/>
+                    <include name="testCreateAffiliateCookieNegetiveTC"/>
+                </methods>
+            </class>
+            <class name="affiliate.core.P0_checkAffiliateCookie">
+                <methods>
+                    <include name="testCheckAffiliateCookiePositiveTC"/>
+                </methods>
+            </class>
+            <class name="affiliate.partner.P0_AssertRegisteredPartner">
+                <methods>
+                    <include name="testRegisteredAffiliateTC"/>
+                </methods>
+            </class>
+            <class name="affiliate.partner.P0_CreatePartnerOffer">
+                <methods>
+                    <include name="testCreatePartnerOfferTC"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>

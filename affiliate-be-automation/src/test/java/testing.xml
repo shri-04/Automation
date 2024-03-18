@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="Affiliate_BE_testSuite" thread-count="1" parallel="classes">
+    <listeners>
+        <listener class-name="framework.reports.ExtentReportNG"/>
+    </listeners>
+    <test name="Super-TRex Test Report" >
+        <packages>
+            <package name="affiliate.core.P0_CreateAffiliateCookie"/>
+            <package name="affiliate.core.P0_checkAffiliateCookie"/>
+            <package name="affiliate/partner/P0_AssertRegisteredPartner"/>
+            <package name="affiliate/partner/P0_CreatePartnerOffer"/>
+
+
+        </packages>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
